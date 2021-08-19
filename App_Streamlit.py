@@ -42,11 +42,11 @@ img {
 
 def main():
     """ Common ML Dataset Explorer """
-    #st.title("Live twitter Sentiment analysis")
-    #st.subheader("Select a topic which you'd like to get the sentiment analysis on :")
+    #st.title("SMR (Social Media Response)")
+    #st.subheader("Public opinion on current situation")
 
     html_temp = """
-	<div style="background-color:tomato;"><p style="color:white;font-size:40px;padding:9px">Live twitter Sentiment analysis</p></div>
+	<div style="background-color:tomato;"><p style="color:white;font-size:40px;padding:9px">KBZ Bank</p></div>
 	"""
     st.markdown(html_temp, unsafe_allow_html=True)
     st.subheader("Select a topic which you'd like to get the sentiment analysis on :")
@@ -118,8 +118,8 @@ def main():
     
     #
     from PIL import Image
-    image = Image.open('Logo1.jpg')
-    st.image(image, caption='Twitter for Analytics',use_column_width=True)
+    image = Image.open('og-kbzbank.png')
+    st.image(image, caption='KBZ Bank',use_column_width=True)
     
     
     # Collect Input from user :
@@ -130,7 +130,7 @@ def main():
         
         # Call the function to extract the data. pass the topic and filename you want the data to be stored in.
         with st.spinner("Please wait, Tweets are being extracted"):
-            get_tweets(Topic , Count=200)
+            get_tweets(Topic , Count=1000)
         st.success('Tweets have been Extracted !!!!')    
            
     
@@ -222,13 +222,12 @@ def main():
         
         
         
-    st.sidebar.header("About App")
-    st.sidebar.info("A Twitter Sentiment analysis Project which will scrap twitter for the topic selected by the user. The extracted tweets will then be used to determine the Sentiments of those tweets. \
-                    The different Visualizations will help us get a feel of the overall mood of the people on Twitter regarding the topic we select.")
-    st.sidebar.text("Built with Streamlit")
+    st.sidebar.header("")
+    st.sidebar.info("")
+    st.sidebar.text("")
     
-    st.sidebar.header("For Any Queries/Suggestions Please reach out at :")
-    st.sidebar.info("darekarabhishek@gmail.com")
+    st.sidebar.header("Build by :")
+    st.sidebar.info("Naman Doshi")
     #st.sidebar.subheader("Scatter-plot setup")
     #box1 = st.sidebar.selectbox(label= "X axis", options = numeric_columns)
     #box2 = st.sidebar.selectbox(label="Y axis", options=numeric_columns)
@@ -237,8 +236,8 @@ def main():
 
 
 
-    if st.button("Exit"):
-        st.balloons()
+    #if st.button("Exit"):
+    #   st.balloons()
 
 
 
